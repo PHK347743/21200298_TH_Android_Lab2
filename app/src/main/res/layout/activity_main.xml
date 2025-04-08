@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:background="#000000">
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="45"
+            android:gravity="bottom"
+            android:textAlignment="textEnd"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+        <LinearLayout
+            android:layout_weight="45"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/iptemp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColorLink="#FFFFFF"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="0"
+                android:textAlignment="textEnd"
+                android:textColor="#FFFFFF"
+                android:textSize="48sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_margin="10px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000" />
+
+    <!-- Buttons Section -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="60"
+        android:weightSum="5">
+
+        <!-- Row 1: +/-, AC, Del, Divide -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/toggleSign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="+/-"
+                android:textColor="#EF000000"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/AC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="AC"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Delete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="Del"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/phepchia"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:text="/"
+                android:textColor="#FFFFFF"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 2: 7, 8, 9, Multiply -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/num7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="7"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="8"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="9"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/phepnhan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:text="x"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 3: 4, 5, 6, Subtract -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/num4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="4"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="5"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="6"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/dautru"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:text="-"
+                android:textColor="#FFFFFF"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 4: 1, 2, 3, Add -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/num1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="1"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="2"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="3"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/daucong"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 5: Decimal, 0, Equals -->
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/thapphan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:gravity="center"
+                android:text="."
+                android:textColor="#EF000000"
+                android:textSize="60sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/num0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_dynamic_neutral70"
+                android:text="0"
+                android:textColor="#EF000000"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@android:color/holo_orange_dark"
+                android:text="="
+                android:textColor="#FFFFFF"
+                android:textSize="31sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
